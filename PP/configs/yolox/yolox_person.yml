@@ -1,0 +1,11 @@
+_BASE_: [
+  '../datasets/coco_person.yml',
+  '../runtime.yml',
+  './_base_/optimizer.yml',
+  './_base_/yolox_cspdarknet.yml',
+  './_base_/yolox_reader.yml'
+]
+
+log_iter: 10
+snapshot_epoch: 5
+weights: PP/output/weights

@@ -1,0 +1,47 @@
+epoch: 400
+worker_num: 4
+
+TrainReader:
+  sample_transforms:
+    - Decode: {}
+    - Resize: {target_size: [480,960], keep_ratio: True, interp: 1}
+    - Mosaic:
+        prob: 1.0
+        input_dim: [480,960]
+        degrees: [-10, 10]
+        scale: [0.1, 2.0]
+        shear: [-2, 2]
+        translate: [-0.1, 0.1]
+        enable_mixup: True
+        mixup_prob: 1.0
+        mixup_scale: [0.5, 1.5]
+    - AugmentHSV: {is_bgr: False, hgain: 5, sgain: 30, vgain: 30}
+    - PadResize: {target_size: 960, fill_value: 114}
+    - RandomFlip: {}
+  batch_transforms:
+    - Permute: {}
+  batch_size: 16
+  shuffle: True
+  drop_last: True
+  collate_batch: False
+  mosaic_epoch: 300
+
+
+EvalReader:
+  sample_transforms:
+    - Decode: {}
+    - Resize: {target_size: [480,960], keep_ratio: True, interp: 1}
+    - Pad: {size: [480,960], fill_value: [114., 114., 114.]}
+    - Permute: {}
+  batch_size: 4
+
+
+TestReader:
+  inputs_def:
+    image_shape: [3, 480,960]
+  sample_transforms:
+    - Decode: {}
+    - Resize: {target_size: [480,960], keep_ratio: True, interp: 1}
+    - Pad: {size: [480,960], fill_value: [114., 114., 114.]}
+    - Permute: {}
+  batch_size: 1

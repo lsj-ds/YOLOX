@@ -1,0 +1,19 @@
+<annotation>
+    <folder>images</folder>
+    <filename>000000425361.jpg</filename>
+    <size>
+        <width>640</width>
+        <height>491</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>person</name>
+        <bndbox>
+            <xmin>104</xmin>
+            <ymin>21</ymin>
+            <xmax>365</xmax>
+            <ymax>451</ymax>
+        </bndbox>
+    </object>
+</annotation>

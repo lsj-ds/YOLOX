@@ -1,0 +1,37 @@
+<annotation>
+    <folder>images</folder>
+    <filename>000000465806.jpg</filename>
+    <size>
+        <width>640</width>
+        <height>480</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>person</name>
+        <bndbox>
+            <xmin>2</xmin>
+            <ymin>0</ymin>
+            <xmax>516</xmax>
+            <ymax>323</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>person</name>
+        <bndbox>
+            <xmin>239</xmin>
+            <ymin>0</ymin>
+            <xmax>465</xmax>
+            <ymax>227</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>person</name>
+        <bndbox>
+            <xmin>1</xmin>
+            <ymin>2</ymin>
+            <xmax>211</xmax>
+            <ymax>234</ymax>
+        </bndbox>
+    </object>
+</annotation>
